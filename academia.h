@@ -12,33 +12,33 @@ struct pessoa{
 };
 
 /* 
- * Função: iniciarSistema
+ * FunÃ§Ã£o: iniciarSistema
  * --------------------------
- * Verifica se os arquivos necessários para o sistema funcionar
- * exitem, caso não exista cria eles.
+ * Verifica se os arquivos necessÃ¡rios para o sistema funcionar
+ * exitem, caso nÃ£o exista cria eles.
  *
  * Retorno: int (1 ->sucesso || 0 ->erro)
  */
 int iniciarSistema();
 
 /* 
- * Função: retirarQuebraDeLinha
+ * FunÃ§Ã£o: retirarQuebraDeLinha
  * --------------------------
  * Retira quebra de linha de uma string
  *
- * Parâmetro:
- * char str[] -> string que será removida a quebra de linha
+ * ParÃ¢metro:
+ * char str[] -> string que serÃ¡ removida a quebra de linha
  *
  * Retorno: void
  */
 void retirarQuebraDeLinha(char str[]);
 
 /* 
- * Função: obterUltimoId
+ * FunÃ§Ã£o: obterUltimoId
  * --------------------------
- * Obtem o último ID do tipo passado como parâmetro
+ * Obtem o Ãºltimo ID do tipo passado como parÃ¢metro
  *
- * Parâmetro:
+ * ParÃ¢metro:
  * char tipo ('a' ->Aluno | 'p' ->Professor | 't' ->Turma(Aula))
  *
  * Retorno: int -> o ID lido
@@ -46,11 +46,11 @@ void retirarQuebraDeLinha(char str[]);
 int obterUltimoId(char tipo);
 
 /* 
- * Função: incrementarId
+ * FunÃ§Ã£o: incrementarId
  * --------------------------
- * Incrementa o ID do tipo como parâmetro
+ * Incrementa o ID do tipo como parÃ¢metro
  *
- * Parâmetro:
+ * ParÃ¢metro:
  * char tipo ('a' ->Aluno | 'p' ->Professor | 't' ->Turma(Aula))
  *
  * Retorno: int -> o ID incrementado
@@ -58,12 +58,12 @@ int obterUltimoId(char tipo);
 int incrementarId(char tipo);
 
 /* 
- * Função: cadastrarPessoa
+ * FunÃ§Ã£o: cadastrarPessoa
  * --------------------------
  * Cadastra uma nova pessoa no sistema
  *
- * Parâmetro:
- * struct pessoa pessoa -> Estrutura com as informações da pessoa
+ * ParÃ¢metro:
+ * struct pessoa pessoa -> Estrutura com as informaÃ§Ãµes da pessoa
  * char tipo ('a' ->Aluno || 'p' ->Professor)
  *
  * Retorno: int (1 ->sucesso || 0 ->erro)	
@@ -71,58 +71,58 @@ int incrementarId(char tipo);
 int cadastrarPessoa(struct pessoa psa, char tipo);
 
 /* 
- * Função: cadastrarTurma
+ * FunÃ§Ã£o: cadastrarTurma
  * --------------------------
  * Cadastra uma nova turma no sistema
  *
- * Parâmetro:
- * struct turma turma -> Estrutura com as informações da turma
+ * ParÃ¢metro:
+ * struct turma turma -> Estrutura com as informaÃ§Ãµes da turma
  *
  * Retorno: int (1 ->sucesso || 0 ->erro)	
  */
 int cadastrarTurma(struct turma turma);
 
 /* 
- * Função: inscreverAluno
+ * FunÃ§Ã£o: inscreverAluno
  * --------------------------
  * Inscreve um aluno em uma aula
  *
- * Parâmetro:
- * int id_aluno -> ID do aluno que será inscrito
- * int id_aula -> ID da aula que será inscrito
+ * ParÃ¢metro:
+ * int id_aluno -> ID do aluno que serÃ¡ inscrito
+ * int id_aula -> ID da aula que serÃ¡ inscrito
  *
  * Retorno: int (1 ->sucesso || 0 ->erro)	
  */
 int inscreverAluno(int id_aluno, int id_aula);
 
 /* 
- * Função: cancelarInscricao
+ * FunÃ§Ã£o: cancelarInscricao
  * --------------------------
- * Cancela a inscrição de um aluno em uma aula
+ * Cancela a inscriÃ§Ã£o de um aluno em uma aula
  * ou de todos os alunos em uma aula(se o id_aluno = -1)
  *
- * Parâmetro:
- * int id_aluno -> ID do aluno que será cancelada a inscrição
- * int id_aula -> ID da aula que será cancelada a inscrição
+ * ParÃ¢metro:
+ * int id_aluno -> ID do aluno que serÃ¡ cancelada a inscriÃ§Ã£o
+ * int id_aula -> ID da aula que serÃ¡ cancelada a inscriÃ§Ã£o
  *
  * Retorno: int (1 ->sucesso || 0 ->erro)	
  */
 int cancelarInscricao(int id_aluno, int id_aula);
 
 /* 
- * Função: fecharTurmas
+ * FunÃ§Ã£o: fecharTurmas
  * --------------------------
- * Fecha todas as turmas com menos inscrições do que o inteiro passado como parâmetro
+ * Fecha todas as turmas com menos inscriÃ§Ãµes do que o inteiro passado como parÃ¢metro
  *
- * Parâmetro:
- * int min -> quantidade mínima de inscrições que a turma deve ter para não ser cancelada
+ * ParÃ¢metro:
+ * int min -> quantidade mÃ­nima de inscriÃ§Ãµes que a turma deve ter para nÃ£o ser cancelada
  *
  * Retorno: int -> quantidade de turmas fechadas
  */
 int fecharTurmas(int min);
 
 /* 
- * Função: confirmarTurmas
+ * FunÃ§Ã£o: confirmarTurmas
  * --------------------------
  * Confirma todas as turmas que existem no arquivo de aulas no momento
  *
@@ -131,4 +131,3 @@ int fecharTurmas(int min);
 int confirmarTurmas();
 
 #endif
-

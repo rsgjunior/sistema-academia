@@ -18,17 +18,17 @@ int main(){
 	
     while(opMenu!=8){
     	system("cls");
-        printf("Sistema de gerenciamento Academia SuperaÁ„o!\n");
+        printf("Sistema de gerenciamento Academia Supera√ß√£o!\n");
         printf("\n1- Cadastrar um aluno "
             "\n2- Cadastrar um professor"
             "\n3- Cadastrar turma"
             "\n4- Inscrever aluno em uma turma"
-            "\n5- Cancelar inscriÁ„o"
+            "\n5- Cancelar inscri√ß√£o"
             "\n6- Fechar turmas"
             "\n7- Confirmar turmas"
             "\n8- Fechar o programa");
 
-        printf("\n\nInsira o n˙mero da funÁ„o que deseja acessar: ");
+        printf("\n\nInsira o n√∫mero da fun√ß√£o que deseja acessar: ");
         scanf("%d", &opMenu);
         switch(opMenu){
             case 1: // Cadastrar aluno
@@ -77,22 +77,22 @@ int main(){
             	system("cls");
             	printf("Cadastrar nova turma: \n\n");
             	// Entrada de dados
-				printf("Insira o tipo da aula(A=Artes Marciais, B=Boxe, C=Crossfit, D=DanÁa): ");
+				printf("Insira o tipo da aula(A=Artes Marciais, B=Boxe, C=Crossfit, D=Dan√ßa): ");
 				fflush(stdin);
 				fgets(&turma.tipo,2,stdin);
 				printf("Insira o dia da semana da aula(1=Domingo,2=Segunda,...): ");
 				scanf("%d", &turma.dia);
-				printf("Insira o hor·rio(HH:MM): ");
+				printf("Insira o hor√°rio(HH:MM): ");
 				fflush(stdin);
 				fgets(turma.horario,6,stdin);
 				printf("Insira o ID do professor: ");
 				fflush(stdin);
 				scanf("%d", &turma.id_prof);
-				printf("Insira o n˙mero mÌnimo de alunos: ");
+				printf("Insira o n√∫mero m√≠nimo de alunos: ");
 				scanf("%d", &turma.minimo);
-				printf("Insira o n˙mero m·ximo de alunos: ");
+				printf("Insira o n√∫mero m√°ximo de alunos: ");
 				scanf("%d", &turma.maximo);
-				printf("Insira a faixa et·ria da aula(XX-XX): ");
+				printf("Insira a faixa et√°ria da aula(XX-XX): ");
 				fflush(stdin);
 				fgets(turma.faixa_etaria,6,stdin);
             	if(cadastrarTurma(turma)){
@@ -106,23 +106,23 @@ int main(){
             	// Entrada de Dados
 				printf("Insira o ID do aluno que deseja inscrever: ");
 				scanf("%d",&id_aluno);
-				printf("Insira o ID da aula que o aluno ser· inscrito: ");
+				printf("Insira o ID da aula que o aluno ser√° inscrito: ");
 				scanf("%d",&id_aula);
             	if(inscreverAluno(id_aluno,id_aula)){
             		printf("\nAluno inscrito com sucesso!\n\n");
 				}
 				system("pause");
                 break;
-            case 5: // Cancelar inscriÁ„o
+            case 5: // Cancelar inscri√ß√£o
 	            system("cls");
-	            printf("Cancelar a inscriÁ„o de um aluno em uma turma: \n\n");
+	            printf("Cancelar a inscri√ß√£o de um aluno em uma turma: \n\n");
 	            // Entrada de Dados
 	            printf("Insira o ID do aluno que deseja cancelar: ");
 				scanf("%d",&id_aluno);
 				printf("Insira o ID da aula que deseja cancelar o aluno: ");
 				scanf("%d",&id_aula);
 				if(cancelarInscricao(id_aluno,id_aula)){
-					printf("\nInscriÁ„o cancelada com sucesso!\n\n");
+					printf("\nInscri√ß√£o cancelada com sucesso!\n\n");
 					system("pause");
 				}
                 break;
@@ -130,7 +130,7 @@ int main(){
             	system("cls");
             	printf("Fechar turmas com menos alunos que:\n\n");
             	// Entrada de dados
-            	printf("Insira o n˙mero minÌmo de alunos: ");
+            	printf("Insira o n√∫mero min√≠mo de alunos: ");
             	scanf("%d",&min);
             	printf("Total de turmas fechadas: %d\n\n",fecharTurmas(min));
             	system("pause");
@@ -147,7 +147,7 @@ int main(){
             case 8: // Fechar o programa
                 break;
             default:
-                printf("\nOpÁ„o inv·lida, digite novamente!\n");
+                printf("\nOp√ß√£o inv√°lida, digite novamente!\n");
                 system("pause");
                 break;
         }
